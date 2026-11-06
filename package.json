@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node --watch ./src/app.js",
     "test": "jest --coverage ./tests",
-    "lint": "eslint src/*.js"
+    "lint": "eslint src/*.js",
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
