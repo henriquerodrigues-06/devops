@@ -1,0 +1,10 @@
+services:
+  app:
+    image: henriquerodrigues06/cesusc-devops:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge

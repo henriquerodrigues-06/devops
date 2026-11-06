@@ -1,0 +1,16 @@
+FROM node:20-alpine  
+
+# Define o diretório de trabalho
+RUN mkdir -p /opt/cesusc-devops
+WORKDIR /opt/cesusc-devops
+
+# Copia os arquivos necessários
+COPY src/ src/
+COPY package*.json .
+RUN npm install --production
+
+# Expõe a porta 3000 (ajuste conforme seu app)
+EXPOSE 3000
+
+# Comando para rodar o app com Uvicorn (ajuste o nome do módulo se necessário)
+CMD ["npm", "start"]
